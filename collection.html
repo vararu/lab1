@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сравнение квартир</title>
+</head>
+<body>
+  <header>
+    <h1>Сравнение объектов</h1>
+    <p>Сопоставьте характеристики квартир перед выбором</p>
+    <nav aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог объектов</a></li>
+        <li><a href="detail.html">Об объекте</a></li><li><a href="collection.html">Сравнение</a></li>
+        <li><a href="checkout.html">Заявка на ипотеку</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Сравнительная таблица</h2>
+      <p>В строках указаны характеристики, в столбцах — выбранные квартиры.</p>
+      <table>
+        <caption>Сравнение трёх объектов недвижимости</caption>
+        <thead>
+          <tr>
+            <th scope="col" rowspan="2">Характеристика</th>
+            <th scope="colgroup" colspan="3">Объекты недвижимости</th>
+          </tr>
+          <tr>
+            <th scope="col">«Солнечная»</th>
+            <th scope="col">«Речной берег»</th>
+            <th scope="col">«Зелёный квартал»</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Площадь</th><td>58 м²</td><td>42 м²</td><td>76 м²</td></tr>
+          <tr><th scope="row">Этаж</th><td>5 из 12</td><td>9 из 16</td><td>3 из 10</td></tr>
+          <tr><th scope="row">Цена</th><td>8 400 000 ₽</td><td>6 200 000 ₽</td><td>10 900 000 ₽</td></tr>
+          <tr><th scope="row">Комнаты</th><td>2</td><td>1</td><td>3</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th scope="row" colspan="2">Самая низкая цена</th><td colspan="2">«Речной берег» — 6 200 000 ₽</td></tr>
+        </tfoot>
+      </table>
+    </section>
+    <section>
+      <h2>Следующий шаг</h2>
+      <p>Если объект подходит по бюджету, можно заполнить форму для предварительной ипотечной консультации.</p>
+      <p><a href="checkout.html">Перейти к заявке</a></p>
+    </section>
+  </main>
+  <footer><p>Учебный проект агентства недвижимости.</p></footer>
+</body>
+</html>

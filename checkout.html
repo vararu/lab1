@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заявка на ипотеку</title>
+</head>
+<body>
+  <header>
+    <h1>Заявка на ипотеку</h1>
+    <p>Заполните данные для предварительной консультации</p>
+    <nav aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог объектов</a></li>
+        <li><a href="detail.html">Об объекте</a></li><li><a href="collection.html">Сравнение</a></li>
+        <li><a href="checkout.html">Заявка на ипотеку</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Данные заявителя</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Контактная информация</legend>
+          <p><label for="full-name">Фамилия, имя и отчество</label><br>
+          <input type="text" id="full-name" name="full_name" autocomplete="name" minlength="5" maxlength="100" required></p>
+          <p><label for="email">Электронная почта</label><br>
+          <input type="email" id="email" name="email" autocomplete="email" required></p>
+          <p><label for="phone">Телефон</label><br>
+          <input type="tel" id="phone" name="phone" pattern="[+0-9() -]{10,20}" placeholder="+7 900 123-45-67" required></p>
+          <p><label for="passport">Серия и номер паспорта</label><br>
+          <input type="text" id="passport" name="passport" pattern="[0-9]{10}" inputmode="numeric" minlength="10" maxlength="10" placeholder="10 цифр" required></p>
+        </fieldset>
+        <fieldset>
+          <legend>Параметры кредита</legend>
+          <p><label for="property">Выбранный объект</label><br>
+          <select id="property" name="property" required>
+            <option value="">Выберите квартиру</option>
+            <option value="solnechnaya">«Солнечная» — 8 400 000 ₽</option>
+            <option value="rechnoy-bereg">«Речной берег» — 6 200 000 ₽</option>
+            <option value="zeleny-kvartal">«Зелёный квартал» — 10 900 000 ₽</option>
+          </select></p>
+          <p><label for="down-payment">Первоначальный взнос (руб.)</label><br>
+          <input type="number" id="down-payment" name="down_payment" min="0" step="10000" required></p>
+          <p><label for="term">Срок кредитования</label><br>
+          <select id="term" name="loan_term" required>
+            <option value="">Выберите срок</option>
+            <option value="5">5 лет</option><option value="10">10 лет</option>
+            <option value="15">15 лет</option><option value="20">20 лет</option>
+          </select></p>
+          <p><label for="income">Ежемесячный доход (руб.)</label><br>
+          <input type="number" id="income" name="monthly_income" min="0" step="1000" required></p>
+          <p><label for="document">Загрузить скан документа (учебный пример)</label><br>
+          <input type="file" id="document" name="document_scan" accept=".pdf,.jpg,.jpeg,.png" required></p>
+          <p><label for="comment">Дополнительная информация</label><br>
+          <textarea id="comment" name="comment" rows="4" maxlength="500" placeholder="Укажите удобное время для связи или вопрос"></textarea></p>
+        </fieldset>
+        <p><input type="checkbox" id="consent" name="consent" value="yes" required>
+        <label for="consent">Согласен(на) на обработку данных в рамках учебной демонстрации</label></p>
+        <p><button type="submit">Проверить заполнение заявки</button> <button type="reset">Очистить форму</button></p>
+      </form>
+    </section>
+  </main>
+  <footer><p>Не вводите реальные паспортные данные и не загружайте настоящие документы: форма создана только для лабораторной работы.</p></footer>
+</body>
+</html>
