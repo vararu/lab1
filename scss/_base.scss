@@ -1,0 +1,21 @@
+@use "variables" as *;
+body {
+  font-family: $font-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition, opacity $transition;
+
+  &:hover { color: $color-primary-dark; text-decoration: underline; }
+  &:focus-visible { outline: 2px solid $color-primary; outline-offset: 2px; border-radius: 4px; }
+}
+
+h1, h2, h3 { line-height: 1.25; margin: 0 0 $space-md; }
+p { margin: 0 0 $space-md; }
+img { max-width: 100%; display: block; }

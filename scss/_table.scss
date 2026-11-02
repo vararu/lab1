@@ -1,0 +1,24 @@
+@use "variables" as *;
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  overflow: hidden;
+
+  &__caption {
+    caption-side: top;
+    text-align: left;
+    padding: $space-sm 0;
+    color: $color-muted;
+  }
+
+  &__cell {
+    padding: $space-sm;
+    border: 1px solid $color-border;
+    text-align: left;
+    &--head { background: $color-bg; font-weight: 600; }
+    &--foot { background: $color-bg; }
+  }
+}

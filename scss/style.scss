@@ -1,0 +1,58 @@
+@use "variables" as *;
+@use "reset";
+@use "base";
+@use "header";
+@use "button";
+@use "card";
+@use "form";
+@use "table";
+
+.main {
+  padding: $space-lg $space-md;
+}
+
+.section {
+  margin-bottom: $space-xl;
+  &__title { margin-bottom: $space-md; }
+}
+
+.footer {
+  padding: $space-lg $space-md;
+  background: #eceef1;
+  color: $color-muted;
+  font-size: 14px;
+  border-top: 1px solid $color-border;
+}
+
+// ===== ВАРИАНТ 5: фиксированная кнопка ипотечного калькулятора =====
+.mortgage-fab {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: $space-sm $space-md;
+  background: $color-primary;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: background $transition;
+
+  &:hover { background: $color-primary-dark; text-decoration: none; }
+  &:focus-visible { outline: 3px solid $color-primary-dark; outline-offset: -3px; }
+
+  @media (min-width: 768px) {
+    width: auto;
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+    border-radius: $radius;
+    box-shadow: $shadow;
+  }
+}
+
+body {
+  padding-bottom: 64px; // резерв под фиксированную кнопку
+}

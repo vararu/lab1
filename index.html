@@ -4,45 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Агентство недвижимости</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Агентство недвижимости</h1>
-    <p>Найдите квартиру для жизни и инвестиций</p>
-    <nav aria-label="Основная навигация">
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог объектов</a></li>
-        <li><a href="detail.html">Об объекте</a></li>
-        <li><a href="collection.html">Сравнение</a></li>
-        <li><a href="checkout.html">Заявка на ипотеку</a></li>
+  <header class="header">
+    <h1 class="header__title">Агентство недвижимости</h1>
+    <p class="header__subtitle">Найдите квартиру для жизни и инвестиций</p>
+    <nav class="nav header__nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+        <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог объектов</a></li>
+        <li class="nav__item"><a class="nav__link" href="detail.html">Об объекте</a></li>
+        <li class="nav__item"><a class="nav__link" href="collection.html">Сравнение</a></li>
+        <li class="nav__item"><a class="nav__link" href="checkout.html">Заявка на ипотеку</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section>
-      <h2>Недвижимость без лишних сложностей</h2>
+
+  <main class="main">
+    <section class="section">
+      <h2 class="section__title">Недвижимость без лишних сложностей</h2>
       <p>Помогаем подобрать квартиру, сравнить предложения и оставить заявку на консультацию по ипотеке.</p>
-      <p>В каталоге собраны примеры квартир с указанием района, площади, этажа и стоимости. Выберите подходящий вариант, чтобы изучить его подробнее.</p>
-      <p><a href="catalog.html">Перейти в каталог квартир</a></p>
+      <p>В каталоге собраны примеры квартир с указанием района, площади, этажа и стоимости.</p>
+      <p><a class="button" href="catalog.html">Перейти в каталог квартир</a></p>
     </section>
-    <section>
-      <h2>Наши услуги</h2>
-      <article>
-        <h3>Покупка квартиры</h3>
-        <p>Подбор объектов с учетом бюджета, площади и желаемого района.</p>
+
+    <section class="section">
+      <h2 class="section__title">Наши услуги</h2>
+      <article class="card">
+        <h3 class="card__title">Покупка квартиры</h3>
+        <p class="card__text">Подбор объектов с учетом бюджета, площади и желаемого района.</p>
       </article>
-      <article>
-        <h3>Продажа недвижимости</h3>
-        <p>Подготовка объявления и помощь на этапах сделки.</p>
+      <article class="card">
+        <h3 class="card__title">Продажа недвижимости</h3>
+        <p class="card__text">Подготовка объявления и помощь на этапах сделки.</p>
       </article>
-      <article>
-        <h3>Ипотечная консультация</h3>
-        <p>Предварительный расчет параметров кредита и списка необходимых документов.</p>
+      <article class="card">
+        <h3 class="card__title">Ипотечная консультация</h3>
+        <p class="card__text">Предварительный расчет параметров кредита и списка документов.</p>
       </article>
     </section>
-    <section>
-      <h2>Как начать</h2>
+
+    <section class="section">
+      <h2 class="section__title">Как начать</h2>
       <ol>
         <li>Откройте каталог и выберите интересующие объекты.</li>
         <li>Сравните площадь, этаж и цену.</li>
@@ -50,9 +54,12 @@
       </ol>
     </section>
   </main>
-  <footer>
+
+  <footer class="footer">
     <p>Учебный проект. Все объекты и цены приведены в демонстрационных целях.</p>
     <p>Контакты: student@mail.ru · +7 (777) 777-77-77</p>
   </footer>
+
+  <a class="mortgage-fab" href="checkout.html">Ипотечный калькулятор</a>
 </body>
 </html>

@@ -1,0 +1,27 @@
+@use "variables" as *;
+.button {
+  display: inline-block;
+  padding: $space-sm $space-md;
+  border: 1px solid $color-primary;
+  border-radius: $radius;
+  background: $color-primary;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  transition: background $transition, transform $transition, box-shadow $transition;
+
+  &:hover {
+    background: $color-primary-dark;
+    border-color: $color-primary-dark;
+    transform: translateY(-1px);
+    box-shadow: $shadow;
+    text-decoration: none;
+  }
+  &:focus-visible { outline: 2px solid $color-primary-dark; outline-offset: 2px; }
+
+  &--secondary {
+    background: transparent;
+    color: $color-primary;
+    &:hover { background: rgba($color-primary, 0.08); color: $color-primary-dark; }
+  }
+}

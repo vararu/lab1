@@ -4,43 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Квартира «Солнечная»</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Квартира «Солнечная»</h1>
-    <p>Подробная информация об объекте недвижимости</p>
-    <nav aria-label="Основная навигация">
-      <ul>
-        <li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог объектов</a></li>
-        <li><a href="detail.html">Об объекте</a></li><li><a href="collection.html">Сравнение</a></li>
-        <li><a href="checkout.html">Заявка на ипотеку</a></li>
+  <header class="header">
+    <h1 class="header__title">Квартира «Солнечная»</h1>
+    <p class="header__subtitle">Подробная информация об объекте недвижимости</p>
+    <nav class="nav header__nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+        <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог объектов</a></li>
+        <li class="nav__item"><a class="nav__link" href="detail.html">Об объекте</a></li>
+        <li class="nav__item"><a class="nav__link" href="collection.html">Сравнение</a></li>
+        <li class="nav__item"><a class="nav__link" href="checkout.html">Заявка на ипотеку</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <article>
-      <img src="images/solnechnaya.jpg"
-     alt="Интерьер квартиры «Солнечная»"
-     width="600">
-      <section>
-        <h2>Описание</h2>
-        <p>Светлая двухкомнатная квартира в современном жилом комплексе. Планировка включает гостиную, отдельную спальню, кухню и санузел. Объект подходит для проживания небольшой семьи.</p>
-      </section>
-      <section>
-        <h2>Характеристики</h2>
-        <ul>
-          <li>Тип: вторичная недвижимость</li><li>Общая площадь: 58 м²</li>
-          <li>Жилая площадь: 34 м²</li><li>Этаж: 5 из 12</li>
-          <li>Количество комнат: 2</li><li>Состояние: хорошее</li>
-          <li>Цена: 8 400 000 ₽</li>
-        </ul>
-      </section>
-      <aside>
-        <h2>Заинтересовал объект?</h2>
-        <p><a href="checkout.html">Оставить заявку на ипотечную консультацию</a></p>
-      </aside>
+
+  <main class="main">
+    <article class="card card--horizontal">
+      <div class="card__media">
+        <img class="card__image" src="images/solnechnaya.jpg" alt="Интерьер квартиры «Солнечная»">
+        <span class="price-tag"><span class="price-tag__value">8 400 000 ₽</span></span>
+      </div>
+      <h2 class="card__title">Описание</h2>
+      <p class="card__text">Светлая двухкомнатная квартира в современном жилом комплексе. Планировка включает гостиную, отдельную спальню, кухню и санузел. Объект подходит для проживания небольшой семьи.</p>
+      <h2 class="card__title">Характеристики</h2>
+      <ul class="card__list">
+        <li>Тип: вторичная недвижимость</li>
+        <li>Общая площадь: 58 м²</li>
+        <li>Жилая площадь: 34 м²</li>
+        <li>Этаж: 5 из 12</li>
+        <li>Количество комнат: 2</li>
+        <li>Состояние: хорошее</li>
+        <li>Цена: 8 400 000 ₽</li>
+      </ul>
+      <p class="card__text"><strong>Заинтересовал объект?</strong></p>
+      <a class="button card__link" href="checkout.html">Оставить заявку на консультацию</a>
     </article>
   </main>
-  <footer><p>Информация демонстрационная и не является реальным предложением о продаже.</p></footer>
+
+  <footer class="footer">
+    <p>Информация демонстрационная и не является реальным предложением о продаже.</p>
+  </footer>
+
+  <a class="mortgage-fab" href="checkout.html">Ипотечный калькулятор</a>
 </body>
 </html>

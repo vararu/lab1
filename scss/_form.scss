@@ -1,0 +1,35 @@
+@use "variables" as *;
+.form {
+  &__fieldset {
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    background: $color-surface;
+    padding: $space-md;
+    margin: 0 0 $space-lg;
+  }
+  &__legend { font-weight: 600; padding: 0 $space-xs; }
+  &__row { margin-bottom: $space-md; }
+  &__label { display: block; margin-bottom: $space-xs; font-weight: 500; }
+
+  &__input,
+  &__select,
+  &__textarea {
+    width: 100%;
+    max-width: 520px;
+    padding: $space-sm;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    font: inherit;
+    background: #fff;
+    transition: border-color $transition, box-shadow $transition;
+
+    &:focus-visible {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+    }
+  }
+
+  &__actions { margin-top: $space-md; }
+  &__button + &__button { margin-left: $space-sm; }
+}
