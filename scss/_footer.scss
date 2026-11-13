@@ -1,0 +1,26 @@
+@use "variables" as *;
+.footer {
+  grid-area: footer;
+  background-color: $color-text;
+  color: #d1d5db;
+  padding: $space-lg $space-md;
+  text-align: center;
+  font-size: 0.9rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #93c5fd;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

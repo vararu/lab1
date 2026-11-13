@@ -23,12 +23,28 @@
 
   <main class="main">
     <article class="card card--horizontal">
-      <div class="card__media">
-        <img class="card__image" src="images/solnechnaya.jpg" alt="Интерьер квартиры «Солнечная»">
-        <span class="price-tag"><span class="price-tag__value">8 400 000 ₽</span></span>
+      <!-- АСИММЕТРИЧНАЯ ГАЛЕРЕЯ (CSS Grid, вариант 5) -->
+      <div class="gallery" role="group" aria-label="Фотографии квартиры «Солнечная»">
+        <div class="gallery__item">
+          <img class="gallery__image" src="images/solnechnaya.jpg" alt="Гостиная квартиры «Солнечная»">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__image" src="images/solnechnaya-2.jpg" alt="Кухня квартиры «Солнечная»">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__image" src="images/solnechnaya-3.jpg" alt="Спальня квартиры «Солнечная»">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__image" src="images/solnechnaya-4.jpg" alt="Санузел квартиры «Солнечная»">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__image" src="images/solnechnaya-5.jpg" alt="Балкон квартиры «Солнечная»">
+        </div>
       </div>
+
       <h2 class="card__title">Описание</h2>
       <p class="card__text">Светлая двухкомнатная квартира в современном жилом комплексе. Планировка включает гостиную, отдельную спальню, кухню и санузел. Объект подходит для проживания небольшой семьи.</p>
+
       <h2 class="card__title">Характеристики</h2>
       <ul class="card__list">
         <li>Тип: вторичная недвижимость</li>
@@ -39,6 +55,7 @@
         <li>Состояние: хорошее</li>
         <li>Цена: 8 400 000 ₽</li>
       </ul>
+
       <p class="card__text"><strong>Заинтересовал объект?</strong></p>
       <a class="button card__link" href="checkout.html">Оставить заявку на консультацию</a>
     </article>
@@ -48,6 +65,6 @@
     <p>Информация демонстрационная и не является реальным предложением о продаже.</p>
   </footer>
 
-  <a class="mortgage-fab" href="checkout.html">Ипотечный калькулятор</a>
+  <a class="mortgage-fab" href="checkout.html" aria-label="Перейти к ипотечному калькулятору">Ипотечный калькулятор</a>
 </body>
 </html>

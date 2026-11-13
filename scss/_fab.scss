@@ -1,0 +1,33 @@
+@use "variables" as *;
+.mortgage-fab {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  padding: $space-md;
+  background-color: $color-primary;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-focus;
+    outline-offset: -3px;
+  }
+
+  @media (max-width: ($bp-tablet - 1)) {
+    padding: $space-sm $space-md;
+    font-size: 0.9rem;
+  }
+}

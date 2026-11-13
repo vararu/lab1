@@ -77,17 +77,17 @@
             <label class="form__label" for="income">Ежемесячный доход (руб.)</label>
             <input class="form__input" type="number" id="income" name="monthly_income" min="0" step="1000" required>
           </div>
-          <div class="form__row">
+          <div class="form__row form__row--full">
             <label class="form__label" for="document">Загрузить скан документа (учебный пример)</label>
             <input class="form__input" type="file" id="document" name="document_scan" accept=".pdf,.jpg,.jpeg,.png" required>
           </div>
-          <div class="form__row">
+          <div class="form__row form__row--full">
             <label class="form__label" for="comment">Дополнительная информация</label>
             <textarea class="form__textarea" id="comment" name="comment" rows="4" maxlength="500" placeholder="Укажите удобное время для связи или вопрос"></textarea>
           </div>
         </fieldset>
 
-        <div class="form__row">
+        <div class="form__consent">
           <input type="checkbox" id="consent" name="consent" value="yes" required>
           <label class="form__label" for="consent">Согласен(на) на обработку данных в рамках учебной демонстрации</label>
         </div>
@@ -104,6 +104,6 @@
     <p>Не вводите реальные паспортные данные и не загружайте настоящие документы: форма создана только для лабораторной работы.</p>
   </footer>
 
-  <a class="mortgage-fab" href="checkout.html">Ипотечный калькулятор</a>
+  <a class="mortgage-fab" href="checkout.html" aria-label="Перейти к ипотечному калькулятору">Ипотечный калькулятор</a>
 </body>
 </html>

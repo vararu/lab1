@@ -1,20 +1,54 @@
 @use "variables" as *;
 .header {
-  background: $color-surface;
+  grid-area: header;
+  background-color: $color-surface;
   border-bottom: 1px solid $color-border;
+  box-shadow: $shadow-sm;
   padding: $space-lg $space-md;
+  text-align: center;
 
-  &__title { margin: 0 0 $space-xs; }
-  &__subtitle { color: $color-muted; margin: 0 0 $space-md; }
-}
+  // МИКРОСЕТКА: Flexbox
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-sm;
 
-.nav {
-  &__list { list-style: none; margin: 0; padding: 0; }
-  &__item { margin: $space-xs 0; }
-  &__link {
-    display: inline-block;
-    padding: $space-xs $space-sm;
-    border-radius: $radius;
-    &:hover { background: $color-bg; text-decoration: none; }
+  &__title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-text;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: $color-text-muted;
+    font-size: 0.95rem;
+  }
+
+  &__nav {
+    width: 100%;
+    max-width: $container-max;
+    margin-top: $space-md;
+  }
+
+  @media (min-width: $bp-tablet) {
+    padding: $space-xl $space-lg;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: $bp-desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+
+    &__nav {
+      width: auto;
+      margin-top: 0;
+    }
   }
 }

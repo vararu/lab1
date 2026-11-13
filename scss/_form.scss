@@ -1,35 +1,132 @@
 @use "variables" as *;
 .form {
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-md;
+  display: grid;
+  gap: $space-md;
+
+  @media (min-width: $bp-tablet) {
+    padding: $space-lg;
+  }
+
   &__fieldset {
     border: 1px solid $color-border;
-    border-radius: $radius;
-    background: $color-surface;
+    border-radius: $radius-sm;
     padding: $space-md;
-    margin: 0 0 $space-lg;
+    margin: 0;
+    display: grid;
+    gap: $space-md;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+    }
   }
-  &__legend { font-weight: 600; padding: 0 $space-xs; }
-  &__row { margin-bottom: $space-md; }
-  &__label { display: block; margin-bottom: $space-xs; font-weight: 500; }
+
+  &__legend {
+    font-weight: 700;
+    color: $color-text;
+    padding: 0 $space-sm;
+    font-size: 1.05rem;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+
+    &--full {
+      @media (min-width: $bp-tablet) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: $color-text;
+  }
 
   &__input,
   &__select,
   &__textarea {
     width: 100%;
-    max-width: 520px;
-    padding: $space-sm;
+    padding: $space-sm $space-md;
     border: 1px solid $color-border;
-    border-radius: $radius;
-    font: inherit;
-    background: #fff;
-    transition: border-color $transition, box-shadow $transition;
+    border-radius: $radius-sm;
+    font-family: inherit;
+    font-size: 1rem;
+    color: $color-text;
+    background-color: #fff;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
 
-    &:focus-visible {
+    &:hover {
+      border-color: $color-primary;
+    }
+
+    &:focus {
       outline: none;
       border-color: $color-primary;
-      box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    &:focus-visible {
+      outline: 3px solid $color-focus;
+      outline-offset: 2px;
     }
   }
 
-  &__actions { margin-top: $space-md; }
-  &__button + &__button { margin-left: $space-sm; }
+  &__textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    justify-content: flex-start;
+
+    @media (min-width: $bp-tablet) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__button {
+    flex: 1 1 auto;
+
+    @media (min-width: $bp-tablet) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__consent {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-sm 0;
+  }
+
+  input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: $color-primary;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &:focus-visible {
+      outline: 3px solid $color-focus;
+      outline-offset: 2px;
+    }
+  }
+
+  input[type="file"] {
+    padding: $space-sm;
+    background-color: $color-bg;
+    cursor: pointer;
+  }
 }
